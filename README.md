@@ -11,11 +11,18 @@ Searches the mock Instagram data for a given hashtag or mention.
 ### Query Parameters:
 
 - `term`: The hashtag or mention to search for. This should be URL-encoded if it contains special characters like `#`.
-### Example Request:
 
-` GET http://localhost:3000/search?term=%23hashtag `
+### Example Requests:
 
-Replace `%23hashtag` with the URL-encoded hashtag or mention you want to search for. For example, to search for `#j`, use `%23j`, the `@` can be used as is.
+- Local Testing:
+
+  `GET http://localhost:3000/search?term=%23hashtag`
+
+- Accessing via AWS Server:
+
+  `GET http://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
+
+Replace `%23hashtag` or `%23j` with the URL-encoded hashtag or mention you want to search for. For example, to search for `#j`, use `%23j`, the `@` can be used as is.
 
 ### Response:
 
@@ -26,14 +33,19 @@ The response will be a JSON array of Instagram post objects that contain the spe
 1. Clone the repository.
 2. Navigate to the project directory and install dependencies:
 
-`npm install`
+   `npm install`
 
 3. Start the server:
 
-`node index.js`
-
+   `node index.js`
 
 4. The server will start on `http://localhost:3000`. Use the above API endpoint to perform searches.
+
+## Accessing the API from AWS Server
+
+The API can also be accessed via an AWS server at the following URL:
+
+`http://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
 
 ## Mock Data Source
 
@@ -42,3 +54,4 @@ The mock Instagram data used in this project was obtained from [this source](htt
 ## Disclaimer
 
 This project is for demonstration purposes only and is not affiliated with Instagram or any other social media platforms.
+

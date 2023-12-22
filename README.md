@@ -20,7 +20,7 @@ Searches the mock Instagram data for a given hashtag or mention.
 
 - Accessing via AWS Server:
 
-  `GET http://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
+  `GET https://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
 
 Replace `%23hashtag` or `%23j` with the URL-encoded hashtag or mention you want to search for. For example, to search for `#j`, use `%23j`, the `@` can be used as is.
 
@@ -45,7 +45,7 @@ The response will be a JSON array of Instagram post objects that contain the spe
 
 The API can also be accessed via an AWS server at the following URL:
 
-`http://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
+`https://ec2-51-20-55-213.eu-north-1.compute.amazonaws.com:3000/search?term=%23j`
 
 ## Mock Data Source
 

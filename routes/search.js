@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
   let searchTerm = req.query.term;
 
   if (!searchTerm) {
-    return res.status(400).send('No search term provided');
+    return res.json(instagram);
   }
 
   // Call your searchInstagramData function
